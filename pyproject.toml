@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "tssign"
+version = "0.1.0"
+description = "A Python library and CLI utility"
+authors = ["Daniel Hardman <daniel.hardman@gmail.com>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^8.3.5"
+multicommand = "^1.0.0"
+
+[poetry.group.dev.dependencies]
+
+[tool.poetry.scripts]
+tssign = "tssign.cli:main"  # Define the CLI entry point
