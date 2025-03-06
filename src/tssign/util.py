@@ -6,7 +6,7 @@ import re
 import subprocess
 import tempfile
 
-DEFAULT_NAMESPACE = "daniel.hardman+seqsign@gmail.com"
+DEFAULT_NAMESPACE = "daniel.hardman+tssign@gmail.com"
 SSH_PUBKEY_PAT = re.compile(r'^(ssh-(?:rsa|dss|ed25519|ecdsa)(?:-[a-z0-9]+)?) ([A-Za-z0-9+/=]+)(?: +([^ ]+))?$')
 SSH_SIG_PREFIX = "-----BEGIN SSH SIGNATURE-----"
 
@@ -28,6 +28,19 @@ def sign(fname: str, path_to_privkey: str, namespace: str=DEFAULT_NAMESPACE) -> 
         if process.returncode != 0:
             raise Exception(error_output.decode())
         return signed_output.decode()
+    
+def sign_to_file(fname: str, path_to_privkey: str, dest: str=None, namespace: str=DEFAULT_NAMESPACE):
+    """
+    Use the specified private SSH key to generate a signature over the
+    contents of the specified file, using the specified namespace.
+    Write the signature to a file with the same name as the input file,
+    but with a ".sig" extension.
+    """
+    signature = sign(fname, path_to_privkey, namespace)
+    if not dest:
+        dest = fname + ".sig"
+    with open(dest, "wt") as f:
+        f.write(signature)
 
 def is_file_like(obj):
     return isinstance(obj, io.IOBase)
