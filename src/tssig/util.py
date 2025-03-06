@@ -6,7 +6,7 @@ import re
 import subprocess
 import tempfile
 
-DEFAULT_NAMESPACE = "daniel.hardman+tssign@gmail.com"
+DEFAULT_NAMESPACE = "daniel.hardman+tssig@gmail.com"
 SSH_PUBKEY_PAT = re.compile(r'^(ssh-(?:rsa|dss|ed25519|ecdsa)(?:-[a-z0-9]+)?) ([A-Za-z0-9+/=]+)(?: +([^ ]+))?$')
 SSH_SIG_PREFIX = "-----BEGIN SSH SIGNATURE-----"
 

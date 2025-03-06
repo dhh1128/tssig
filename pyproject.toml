@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "tssign"
+name = "tssig"
 version = "0.1.0"
 description = "Work with timestamped signatures"
 authors = ["Daniel Hardman <daniel.hardman@gmail.com>"]
@@ -14,4 +14,4 @@ opentimestamps-client = "^0.7.2"
 [poetry.group.dev.dependencies]
 
 [tool.poetry.scripts]
-tssign = "tssign.cli:main"  # Define the CLI entry point
+tssig = "tssig.cli:main"  # Define the CLI entry point

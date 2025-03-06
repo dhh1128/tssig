@@ -1,2 +1,2 @@
-# tssign
-Generate or verify signatures with a provable timestamp.
+# tssig
+Work with signatures that have a provable timestamp.
