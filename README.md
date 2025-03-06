@@ -1,2 +1,2 @@
-# seqsign
-Generate or verify sequenced signatures (ones with a provable timestamp).
+# tssign
+Generate or verify signatures with a provable timestamp.

@@ -3,7 +3,7 @@ import pytest
 import subprocess
 import tempfile
 
-from seqsign import sign, verify_by_pubkey, verify_by_identifier
+from tssign import sign, verify_by_pubkey, verify_by_identifier
 
 @pytest.fixture
 def ed25519_key():

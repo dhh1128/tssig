@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "tssign"
 version = "0.1.0"
-description = "A Python library and CLI utility"
+description = "Work with timestamped signatures"
 authors = ["Daniel Hardman <daniel.hardman@gmail.com>"]
 license = "Apache-2.0"
 
@@ -9,6 +9,7 @@ license = "Apache-2.0"
 python = "^3.8"
 pytest = "^8.3.5"
 multicommand = "^1.0.0"
+opentimestamps-client = "^0.7.2"
 
 [poetry.group.dev.dependencies]
 
